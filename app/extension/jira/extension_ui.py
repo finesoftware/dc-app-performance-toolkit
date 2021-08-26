@@ -10,12 +10,12 @@ from util.conf import JIRA_SETTINGS
 
 def app_specific_action(webdriver, datasets):
     page = BasePage(webdriver)
-    
+
     @print_timing("selenium_app_custom_action")
     def measure():
         @print_timing("selenium_app_custom_action:view_sheet")
         def sub_measure():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/projects/SCRUM?selectedItem=app.jxl:sheets")
-            page.wait_until_visible((By.CLASS_NAME, "jxl-table-header-cell"))
+            page.wait_until_visible((By.ID, "itsfine-sconnect-iframe"))
         sub_measure()
     measure()
