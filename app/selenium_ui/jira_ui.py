@@ -55,10 +55,6 @@ def test_1_selenium_view_issue(jira_webdriver, jira_datasets, jira_screen_shots)
     modules.view_issue(jira_webdriver, jira_datasets)
 
 
-def test_1_selenium_view_project_summary(jira_webdriver, jira_datasets, jira_screen_shots):
-    modules.view_project_summary(jira_webdriver, jira_datasets)
-
-
 def test_1_selenium_custom_action(jira_webdriver, jira_datasets, jira_screen_shots):
     extension_ui.app_specific_action(jira_webdriver, jira_datasets)
 
